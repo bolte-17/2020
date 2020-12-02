@@ -3,3 +3,7 @@
 F# Jupyter Notebooks powered by new Dotnet Interactive.
 
 Repository supports VSCode Remote containerized dev environment.
+
+Use VSCode command `>.NET Interactive: Open Notebook` to open the .ipynb files.
+
+If running in dev container, it'll try to default the path to `/home/...`, but the correct root path is `/workspace`
