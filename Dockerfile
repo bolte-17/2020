@@ -1,3 +1,5 @@
+# Dockerfile for Binder support
+
 FROM jupyter/base-notebook:latest
 
 # Install .NET CLI dependencies
