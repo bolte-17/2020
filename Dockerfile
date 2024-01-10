@@ -13,7 +13,7 @@ ENV HOME /home/${NB_USER}
 WORKDIR ${HOME}
 
 USER root
-RUN apt-get update
+RUN apt-get update -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false
 RUN apt-get install -y curl
 
 ENV \
@@ -27,7 +27,7 @@ ENV \
     DOTNET_TRY_CLI_TELEMETRY_OPTOUT=true
 
 # Install .NET CLI dependencies
-RUN apt-get update \
+RUN apt-get update -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         libc6 \
         libgcc1 \
